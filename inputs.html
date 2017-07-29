@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成绩单打印</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="function.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",function () {
+            document.getElementById('inputs').addEventListener('submit',function (event) {
+                InfoCheckAndInput(document.getElementById('inputs'));
+            })
+
+        })
+    </script>
+</head>
+<body>
+<br><br>
+  <div class="container">
+    <ul class="nav nav-pills">
+        <li role="presentation" ><a href="main.html">全部成绩</a></li>
+        <li role="presentation"><a href="search.html">查询成绩</a></li>
+        <li role="presentation" class="active"><a href="#">录入成绩</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+   <form name="inputInfo" id="inputs" action="inputs.html" >
+    <fieldset>
+        <h2>添加学生</h2>
+        姓名：    <input type="text" name="Name"><br>
+        学号：    <input type="text" name="studyNumber"><br>
+        民族：    <input type="text" name="nation"><br>
+        班级：    <input type="text" name="klass"><br>
+        数学成绩： <input type="text" name="mathGrade"><br>
+        语文成绩： <input type="text" name="chineseGrade"><br>
+        英语成绩： <input type="text" name="englishGrade"><br>
+        编程成绩： <input type="text" name="programGrade"><br>
+        <input type="submit" value="提交">
+    </fieldset>
+   </form>
+  </div>
+
+</body>
+</html>
